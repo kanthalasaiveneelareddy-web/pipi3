@@ -1,4 +1,9 @@
-from app import add
+import unittest
 
-def test_add():
-    assert add(10, 20) == 30
+class TestApp(unittest.TestCase):
+
+    def test_addition(self):
+        self.assertEqual(10 + 20, 30)
+
+if __name__ == "__main__":
+    unittest.main()
